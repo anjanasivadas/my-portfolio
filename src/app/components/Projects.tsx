@@ -1,24 +1,22 @@
-"use client";
-
 import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Bookstore (E-commerce)",
-    description: "A full-stack online bookstore built with React, Node.js, and MongoDB. Users can browse books, add to cart, and make secure purchases.",
-    link: "#"
-  },
-  {
-    title: "Order Tracking (Blockchain)",
-    description: "A blockchain-based order tracking system to securely track product orders, ensuring transparency and reliability in supply chain management.",
-    link: "#"
+    title: "WeatherApp247",
+    description:
+      "A live weather app built with React and OpenWeatherMap API. Shows temperature, humidity, wind speed, and dynamic backgrounds.",
+    github: "https://github.com/anjanasivadas/weather-app",
+    live: "https://weather-app-9yv2.vercel.app/"
   },
   {
     title: "Todo App",
-    description: "A simple web application to manage daily tasks, built using React and Tailwind CSS.",
-    link: "#"
+    description:
+      "A simple and responsive Todo app built with React. Allows adding, deleting, and marking tasks as completed.",
+    github: "https://github.com/anjanasivadas/TOdoApp",
+    live: "https://t-odo-app-five.vercel.app/"
   }
 ];
+
 
 export default function Projects() {
   return (
@@ -43,7 +41,31 @@ export default function Projects() {
           >
             <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
             <p className="text-gray-300 mb-3">{proj.description}</p>
-            <a href={proj.link} className="text-blue-400 hover:underline">View Project</a>
+
+            <div className="flex gap-4 mt-4">
+              {proj.github && (
+                <a
+                  href={proj.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:underline"
+                >
+                  GitHub
+                </a>
+              )}
+
+              {proj.live && (
+                <a
+                  href={proj.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-400 hover:underline"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
+
           </motion.div>
         ))}
       </div>
