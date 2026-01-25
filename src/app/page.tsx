@@ -18,6 +18,16 @@ export default function Home() {
           <li><a href="#about" className="hover:text-white">About</a></li>
           <li><a href="#skills" className="hover:text-white">Skills</a></li>
           <li><a href="#projects" className="hover:text-white">Projects</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/drive/folders/1LHwzTcMGEU-UuInjayOyREt-X8Ve_C40?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400"
+            >
+              Certificates
+            </a>
+          </li>
           <li><a href="#contact" className="hover:text-white">Contact</a></li>
         </ul>
       </nav>
